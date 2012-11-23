@@ -1,0 +1,39 @@
+﻿@using InputType = Ext.Net.InputType
+@{
+    ViewBag.Title = "Inicio de Sesión";
+}
+
+@(Html.X().Window()
+      .Items(items =>
+             items.Add(
+                 Html.X().FormPanel()
+                     .Items(itemsFormPanel =>
+                         {
+                             itemsFormPanel.Add(Html.X().TextField()
+                                                    .ID("usuario")
+                                                    .FieldLabel("Usuario")
+                                                    .EmptyText("Nombre de Usuario"));
+                             itemsFormPanel.Add(Html.X().TextField()
+                                                    .ID("contraseña")
+                                                    .FieldLabel("Contraseña")
+                                                    .InputType(InputType.Password));
+                         }
+                     )
+                     .Buttons(botones => botones.Add(Html.X().Button()
+                                                         .ID("iniciarSesion")
+                                                         .Text("Iniciar")
+                                                         .Listeners(listeners =>
+                                                             listeners.Click.Handler = "Ext.Msg.show({title: 'Inicio de Sesión', msg: 'Implementar inicio de sesión', buttons: Ext.Msg.OK });"
+                                                         )
+                                             ))
+                     .ButtonAlign(Alignment.Center)
+                     .BodyStyle("background:transparent;")
+                     .Border(false)
+                 )
+      ).Width(300)
+      .Height("auto")
+      .BodyPadding(5)
+      .Layout(LayoutType.Fit)
+      .Title("Inicio de Sesión"))
+
+@Html.ActionLink("ASPX", "InicioSesion")

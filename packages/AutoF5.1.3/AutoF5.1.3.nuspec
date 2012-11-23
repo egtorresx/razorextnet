@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>AutoF5</id>
+    <version>1.3</version>
+    <title>AutoF5</title>
+    <authors>hongyes</authors>
+    <owners>hongyes</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Auto refresh ASP.NET pages when live editing source code</description>
+    <summary>Auto refresh ASP.NET pages when live editing source code</summary>
+    <copyright>Copyright 2011</copyright>
+    <tags>Tool</tags>
+  </metadata>
+</package>
